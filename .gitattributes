@@ -1,0 +1,2 @@
+src/assets/a-d/a-d_presentation.pptx filter=lfs diff=lfs merge=lfs -text
+src/assets/e-f/e-f_presentation.pptx filter=lfs diff=lfs merge=lfs -text
