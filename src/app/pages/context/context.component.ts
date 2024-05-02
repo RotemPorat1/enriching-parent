@@ -19,7 +19,6 @@ export class ContextComponent {
     link.remove();
   }
   sendWhatsAppInvitation() {
-    console.log('hello');
     let message = encodeURIComponent('ברוכים הבאים להורה מעשיר');
     let url = `https://wa.me/?text=${message}`;
     window.open(url, '_blank'); // Open WhatsApp URL in new window/tab
