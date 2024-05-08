@@ -2,22 +2,11 @@
   <div class="header1">'מערך א'-ג</div>
   <div class="header2">'מערך ד'-ו</div>
 
-  <div class="div1">
-    <button (click)="openPresentation()">הפעלת מצגת</button>
+  @for(context of contextArr; track context;) {
+  <div [class]="context.id">
+    <button (click)="context.action()">
+      {{ context.text }}
+    </button>
   </div>
-  <div class="div2">
-    <button (click)="downloadPDF('work_page_a-c')">הדפסת דף עבודה</button>
-  </div>
-  <div class="div3"><button>חוברת הסבר להורה</button></div>
-  <div class="div4">
-    <button (click)="openPresentation()">הפעלת מצגת</button>
-  </div>
-  <div class="div5">
-    <button (click)="downloadPDF('work_page_d-f')">הדפסת דף עבודה</button>
-  </div>
-  <div class="div6"><button>חוברת הסבר להורה</button></div>
-  <div class="div7"><button>טריוויה רפאל</button></div>
-  <div class="div8">
-    <button (click)="sendWhatsAppInvitation()">הזמנת וואטס אפ</button>
-  </div>
+  }
 </div>
