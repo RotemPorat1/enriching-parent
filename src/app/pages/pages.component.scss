@@ -7,3 +7,18 @@
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
 }
+.layout{
+          /* Set the background image URL */
+          background-image: url('../../assets/images/REKA.jpg'); /* Adjust the path as needed */
+      
+          /* Set background size and position */
+          background-size: cover;
+          background-position: center;
+          
+          /* Set background repeat */
+          background-repeat: no-repeat;
+          
+          /* Optionally, set background color */
+          background-color: rgba(0, 0, 0, 0.5); /* Add transparency with RGBA */
+  
+}
