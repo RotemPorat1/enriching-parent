@@ -1,12 +1,9 @@
 <div class="parent">
-  <div class="header1">'מערך א'-ג</div>
-  <div class="header2">'מערך ד'-ו</div>
-
   @for(context of contextArr; track context;) {
   <div [class]="context.id">
-    <button (click)="context.action()">
-      {{ context.text }}
-    </button>
+    <div (click)="context.action()">
+      <img [src]="context.url" alt="{{ context.url }}" />
+    </div>
   </div>
   }
 </div>
