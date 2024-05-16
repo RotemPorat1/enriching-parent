@@ -1,3 +1,24 @@
-:host {
-  display: block;
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  margin-bottom: 20px; 
+  color: white;
+  font-size: 30px;
+  font: bold;
+}
+.footer-content{
+  text-align: center;
+}
+h4.footer-button{
+  text-align: center;
+  width: 100%;
+  
+}
+.footer-link:link,
+.footer-link:visited,
+.footer-link:hover,
+.footer-link:active {
+  text-decoration: none; 
+  color: inherit; /* Inherits the color from the parent */
 }
