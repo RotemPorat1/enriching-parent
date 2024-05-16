@@ -1,5 +1,5 @@
 export interface ButtonContext {
   id: string;
-  text: string;
+  url: string;
   action: () => void;
 }
