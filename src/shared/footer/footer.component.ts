@@ -19,7 +19,7 @@ export class FooterComponent {
   linkTxt = '> תקשורת רפאל <';
   animateFooter = false;
 
-  //add class animation to footer when the user scroll down to the footer viewPort
+  //Apply animation class to footer when it enters the viewport on scroll
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const footerElement = document.querySelector('.footer');
