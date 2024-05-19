@@ -1,10 +1,10 @@
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    margin-top: 200px;
   }
   
   .image-header {
-    width: 30%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,6 +13,14 @@
   .image-header img {
     max-width: 100%;
     height: auto;
+  }
+  
+  .kids1,.kids2{
+    margin-top: 200px;
+    margin: -300px;
+  }
+  .big-title{
+    margin-top: -120px;
   }
   .sub-Header {
     display: flex;
