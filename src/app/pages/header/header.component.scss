@@ -1,7 +1,6 @@
 .header {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
   }
   
   .image-header {
@@ -23,10 +22,12 @@
   }
   .sub-Header img {
     max-width: 100%;
+    height: auto;
   }
   
 @media (max-width: 768px) {
     .header {
+      display: flex;
       flex-direction: column;
       align-items: center;
   
