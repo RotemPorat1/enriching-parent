@@ -20,5 +20,12 @@ h4.footer-button{
 .footer-link:hover,
 .footer-link:active {
   text-decoration: none; 
-  color: inherit; /* Inherits the color from the parent */
+  color: white; 
+}
+
+@media (max-width: 768px) {
+  .footer-content{ 
+    font-size: 25px;
+    text-align: center;
+  }
 }
