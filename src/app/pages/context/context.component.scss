@@ -9,11 +9,7 @@
 }
 
 
-.headers{
-    color: white;
-    background-color: black;
-    width: 15%;
-}
+
 // Buttons in the right column
 .div1 { grid-area: 2 / 5 / 3 / 7; }  
 .div2 { grid-area: 3 / 5 / 4 / 7; }
@@ -41,4 +37,13 @@ button {
 
 img{
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
