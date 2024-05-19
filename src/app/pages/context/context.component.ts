@@ -79,14 +79,20 @@ export class ContextComponent {
     {
       id: 'div12',
       url: '/assets/images/3_4.png',
-      action: () => 'hello',
+      action: () => this.sendWhatsAppInvitation(),
     },
     {
       id: 'div13',
       url: '/assets/images/3_5.png',
-      action: () => this.sendWhatsAppInvitation(),
+      action: () => console.log('empty for now'),
     },
   ];
+
+  //slice the array to three arrays array for each column
+  rightColumnContext: ButtonContext[] = this.contextArr.slice(0, 4);
+  middleColumnContext: ButtonContext[] = this.contextArr.slice(4, 8);
+  leftColumnContext: ButtonContext[] = this.contextArr.slice(8, 14);
+
   openPresentation() {
     window.location.href = '/assets/presentation/index.html';
   }
