@@ -11,6 +11,7 @@ import {
 } from '@angular/router';
 import { routes } from './app.routes';
 import {
+  HTTP_INTERCEPTORS,
   provideHttpClient,
   withFetch,
   withInterceptors,
@@ -18,7 +19,7 @@ import {
 } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { provideToastr } from 'ngx-toastr';
-import { authInterceptor } from './core/interceptors/auth.interceptor';
+import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 import { GlobalErrorHandler } from './core/interceptors/global-error-handler.interceptor';
 import { isoDateInterceptor } from './core/interceptors/iso-date.interceptor';
 import { provideAnimations } from '@angular/platform-browser/animations';
@@ -33,9 +34,14 @@ export const appConfig: ApplicationConfig = {
     ),
     provideHttpClient(
       withFetch(),
-      withInterceptors([authInterceptor, isoDateInterceptor]),
+      withInterceptors([isoDateInterceptor]),
       withInterceptorsFromDi()
     ),
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
     provideAnimations(),
     provideToastr({
       positionClass: 'toast-bottom-left',

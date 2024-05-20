@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { authGuard } from './core/guards/auth.guard';
-import { ErrorComponent } from './error/error.component';
 
 export const routes: Routes = [
   {
@@ -13,6 +12,20 @@ export const routes: Routes = [
     canActivate: [authGuard],
     loadChildren: () => import('./pages/pages.routes'),
   },
-  { path: 'error', component: ErrorComponent },
+  {
+    path: 'login',
+    loadComponent: () =>
+      import('./login/login.component').then((c) => c.LoginComponent),
+  },
+  {
+    path: 'redirect',
+    loadComponent: () =>
+      import('./redirect/redirect.component').then((c) => c.RedirectComponent),
+  },
+  {
+    path: 'error',
+    loadComponent: () =>
+      import('./error/error.component').then((c) => c.ErrorComponent),
+  },
   { path: '**', redirectTo: 'pages' },
 ];
