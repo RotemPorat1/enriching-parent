@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="column right-column">
+    @for(context of rightColumnContext; track context;) {
+    <div (click)="context.action()">
+      <img [src]="context.url" alt="{{ context.url }}" />
+    </div>
+    }
+  </div>
+  <div class="column middle-column">
+    @for(context of middleColumnContext; track context;) {
+    <div (click)="context.action()">
+      <img [src]="context.url" alt="{{ context.url }}" />
+    </div>
+    }
+  </div>
+
+  <div class="column left-column">
+    @for(context of leftColumnContext; track context;) {
+    <div (click)="context.action()">
+      <img [src]="context.url" alt="{{ context.url }}" />
+    </div>
+    }
+  </div>
+</div>

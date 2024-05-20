@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'NarkissBlockCondensed-Bold';
+    src: url('/assets/fonts/NarkissBlockCondensed-Medium.otf') format('otf');
+    font-weight: bolder;
+    font-style: bold;  
+  }
+
+@font-face {
+    font-family: 'NarkissBlockCondensed-Medium';
+    src: url('/assets/fonts/NarkissBlockCondensed-Medium.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;  
+  }
+@font-face {
+    font-family: 'NarkissBlockCondensed-Thin';
+    src: url('/assets/fonts/NarkissBlockCondensed-Thin.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;  
+  }
+
+  .custom-font-thin{
+   font-family: 'NarkissBlockCondensed-Thin',sans-serif; 
+  }
+  .custom-font-medium {
+    font-family: 'NarkissBlockCondensed-Medium', sans-serif;
+  }
+  
+  .custom-font-bold {
+    font-family: 'NarkissBlockCondensed-Bold', sans-serif;
+  }

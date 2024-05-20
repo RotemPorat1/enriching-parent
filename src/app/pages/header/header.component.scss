@@ -1,0 +1,114 @@
+.header {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    //header-animation
+    -webkit-animation: fade-in-top 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-top 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+  }
+  
+  .image-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-header img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .kids1,.kids2{
+    margin-top: 200px;
+    margin: -300px;
+  }
+  .big-title{
+    margin-top: -120px;
+  }
+  .sub-Header {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 20px; 
+    //animation
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.4s both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.4s both;
+
+  }
+  .sub-Header img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+
+/**
+ * ----------------------------------------
+ * animation fade-in-top
+ * ----------------------------------------
+ */
+ @-webkit-keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+ @-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 768px) {
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      .image-header {
+        width: 100%; 
+        margin-bottom: 10px; 
+      }
+    }
+  
+    .sub-Header {
+      margin-top: 20px; 
+    }
+  }
