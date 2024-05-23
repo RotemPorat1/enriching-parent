@@ -23,12 +23,15 @@ export class ContextComponent {
     {
       id: 'div1',
       url: `/assets/images/1_1.png`,
-      action: () => this.openPresentation(),
+      action: () => this.openWebPresentation(),
     },
     {
       id: 'div2',
       url: '/assets/images/1_2.png',
-      action: () => this.placeHolderfunc(),
+      action: () =>
+        this.openPowerPointPresentation(
+          'https://rafaelcoil.sharepoint.com/:p:/r/DocLib26/%D7%9E%D7%A2%D7%A8%D7%9A%20%D7%90%27-%D7%93%27/%D7%9E%D7%A6%D7%92%D7%AA%20%D7%94%D7%95%D7%A8%D7%94%20%D7%9E%D7%A2%D7%A9%D7%99%D7%A8_%D7%90-%D7%93.pptx?d=w39f5763c752f47499730073a743c25dc&csf=1&web=1&e=eiCZVI'
+        ),
     },
     {
       id: 'div3',
@@ -44,12 +47,15 @@ export class ContextComponent {
     {
       id: 'div5',
       url: '/assets/images/2_1.png',
-      action: () => this.openPresentation(),
+      action: () => this.openWebPresentation(),
     },
     {
       id: 'div6',
       url: '/assets/images/2_2.png',
-      action: () => this.placeHolderfunc(),
+      action: () =>
+        this.openPowerPointPresentation(
+          'https://rafaelcoil.sharepoint.com/:p:/r/DocLib26/%D7%9E%D7%A2%D7%A8%D7%9A%20%D7%94%27-%D7%95%27/%D7%9E%D7%A6%D7%92%D7%AA%20%D7%94%D7%95%D7%A8%D7%94%20%D7%9E%D7%A2%D7%A9%D7%99%D7%A8_%D7%94-%D7%95.pptx?d=w345b7da718ac4081a22889983a1669f7&csf=1&web=1&e=MsQwDW'
+        ),
     },
     {
       id: 'div7',
@@ -93,7 +99,7 @@ export class ContextComponent {
   middleColumnContext: ButtonContext[] = this.contextArr.slice(4, 8);
   leftColumnContext: ButtonContext[] = this.contextArr.slice(8, 14);
 
-  openPresentation() {
+  openWebPresentation() {
     window.location.href = '/assets/presentation/index.html';
   }
 
@@ -151,7 +157,7 @@ export class ContextComponent {
     let url = `https://wa.me/?text=${message}`;
     window.open(url, '_blank'); // Open WhatsApp URL in new window/tab
   }
-  placeHolderfunc() {
-    console.log('clicked');
+  openPowerPointPresentation(url: string) {
+    window.location.href = url;
   }
 }
