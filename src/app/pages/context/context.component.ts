@@ -100,7 +100,8 @@ export class ContextComponent {
   leftColumnContext: ButtonContext[] = this.contextArr.slice(8, 14);
 
   openWebPresentation() {
-    window.location.href = '/assets/presentation/index.html';
+    const url = '/assets/presentation/index.html';
+    window.open(url, '_blank');
   }
 
   downloadPDF(pdfUrl: string) {
@@ -158,6 +159,6 @@ export class ContextComponent {
     window.open(url, '_blank'); // Open WhatsApp URL in new window/tab
   }
   openPowerPointPresentation(url: string) {
-    window.location.href = url;
+    window.open(url, '_blank');
   }
 }
