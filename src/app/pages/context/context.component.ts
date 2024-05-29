@@ -8,10 +8,12 @@ import { environment } from '../../../environments/environment';
 
 import { HttpClient } from '@angular/common/http';
 
+import { TooltipModule } from 'primeng/tooltip';
+
 @Component({
   selector: 'app-context',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TooltipModule],
   templateUrl: './context.component.html',
   styleUrl: './context.component.scss',
 })
@@ -28,6 +30,7 @@ export class ContextComponent {
     {
       id: 'div1',
       url: '/assets/images/1_2.png',
+      toolTip: 'מצגת להפעלה ישירה או הורדה למחשב נייד, ביתי או כיתתי',
       action: () =>
         this.openPowerPointPresentation(
           'https://rafaelcoil.sharepoint.com/:p:/r/DocLib26/%D7%9E%D7%A2%D7%A8%D7%9A%20%D7%90%27-%D7%93%27/%D7%9E%D7%A6%D7%92%D7%AA%20%D7%94%D7%95%D7%A8%D7%94%20%D7%9E%D7%A2%D7%A9%D7%99%D7%A8_%D7%90-%D7%93.pptx?d=w39f5763c752f47499730073a743c25dc&csf=1&web=1&e=eiCZVI'
@@ -36,7 +39,7 @@ export class ContextComponent {
     {
       id: 'div2',
       url: '/assets/images/1_3.png',
-
+      toolTip: '.דפים להדפסה: איור טנק ומפה',
       action: () => this.downloadPDF('assets/a-d/work_page'),
     },
     {
@@ -52,6 +55,7 @@ export class ContextComponent {
     {
       id: 'div4',
       url: '/assets/images/2_2.png',
+      toolTip: 'מצגת להפעלה ישירה או הורדה למחשב נייד, ביתי או כיתתי',
       action: () =>
         this.openPowerPointPresentation(
           'https://rafaelcoil.sharepoint.com/:p:/r/DocLib26/%D7%9E%D7%A2%D7%A8%D7%9A%20%D7%94%27-%D7%95%27/%D7%9E%D7%A6%D7%92%D7%AA%20%D7%94%D7%95%D7%A8%D7%94%20%D7%9E%D7%A2%D7%A9%D7%99%D7%A8_%D7%94-%D7%95.pptx?d=w345b7da718ac4081a22889983a1669f7&csf=1&web=1&e=MsQwDW'
@@ -60,6 +64,7 @@ export class ContextComponent {
     {
       id: 'div5',
       url: '/assets/images/2_3.png',
+      toolTip: 'דפים להדפסה: איור טנק ומפה',
       action: () => this.downloadPDF('assets/e-f/work_page'),
     },
     {
@@ -70,16 +75,19 @@ export class ContextComponent {
     {
       id: 'div7',
       url: '/assets/images/3_1.png',
+      toolTip: 'שלבים לבניית משגר ניסיון והפעלתו',
       action: () => this.downloadPDF('assets/launcher_instructions'),
     },
     {
       id: 'div8',
       url: '/assets/images/3_2.png',
+      toolTip: 'באנר אותו תוכלו להלביש על תמונה כיתתית שתצלמו למזכרת',
       action: () => this.downloadImage(`assets/banner.png`),
     },
     {
       id: 'div9',
       url: '/assets/images/3_3.png',
+      toolTip: 'שלבים ליצירת תמונת מזכרת ממותגת',
       action: () => this.downloadImage(`assets/banner_usage_instructions.jpg`),
     },
     {
@@ -90,11 +98,13 @@ export class ContextComponent {
     {
       id: 'div11',
       url: '/assets/images/3_5.png',
+      toolTip: 'במידה ונותר זמן תוכלו להשתמש באתגר הטריוויה',
       action: () => console.log('empty for now'),
     },
     {
       id: 'div12',
       url: '/assets/images/3_6.png',
+      toolTip: 'מסמך מתעדכן של תשובות לשאלות שאתם שאלתם',
       action: () => console.log('empty for now'),
     },
   ];

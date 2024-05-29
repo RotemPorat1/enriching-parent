@@ -2,14 +2,22 @@
   <div class="column right-column">
     @for(context of rightColumnContext; track context;) {
     <div [id]="context.id" (click)="context.action()">
-      <img [src]="context.url" alt="{{ context.url }}" title="hello" />
+      <img
+        [src]="context.url"
+        alt="{{ context.url }}"
+        [pTooltip]="context.toolTip"
+      />
     </div>
     }
   </div>
   <div class="column middle-right-column">
     @for(context of middleRightColumnContext; track context;) {
     <div [id]="context.id" (click)="context.action()">
-      <img [src]="context.url" alt="{{ context.url }}" />
+      <img
+        [src]="context.url"
+        alt="{{ context.url }}"
+        [pTooltip]="context.toolTip"
+      />
     </div>
     }
   </div>
@@ -17,7 +25,11 @@
   <div class="column middle-left-column">
     @for(context of middleLeftColumnContext; track context;) {
     <div [id]="context.id" (click)="context.action()">
-      <img [src]="context.url" alt="{{ context.url }}" />
+      <img
+        [src]="context.url"
+        alt="{{ context.url }}"
+        [pTooltip]="context.toolTip"
+      />
     </div>
     }
   </div>
@@ -25,7 +37,11 @@
   <div class="column left-column">
     @for(context of leftColumnContext; track context;) {
     <div [id]="context.id" (click)="context.action()">
-      <img [src]="context.url" alt="{{ context.url }}" />
+      <img
+        [src]="context.url"
+        alt="{{ context.url }}"
+        [pTooltip]="context.toolTip"
+      />
     </div>
     }
   </div>
