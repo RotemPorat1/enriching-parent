@@ -16,22 +16,30 @@
 	        animation: fade-in-bottom 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
 
   }
-  .left-column{
-    margin-top: 67px;
-    gap: 45px;
-    margin-left: 20px;
-  }
-
-  img {
-    width: 100%; 
-    cursor: pointer;
-    transition: transform .2s; 
+  // .left-column{
+  //   margin-top: 67px;
+  //   gap: 45px;
+  //   margin-left: 20px;
+  // }
+  
+.middle-left-column,
+.left-column{
+  margin-top: 4.2rem;
+  gap: 45px;
+}
+#div12{
+  margin-top: 2.5rem;
+}
+img {
+  width: 100%; 
+  cursor: pointer;
+  transition: transform .2s; 
     
-  }
+}
 
-  img:hover {
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
+img:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 
 
 

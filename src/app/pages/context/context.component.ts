@@ -20,13 +20,13 @@ export class ContextComponent {
 
   apiUrl = environment.apiUrl;
   contextArr: ButtonContext[] = [
+    // {
+    //   id: 'div1',
+    //   url: `/assets/images/1_1.png`,
+    //   action: () => this.openWebPresentation(),
+    // },
     {
       id: 'div1',
-      url: `/assets/images/1_1.png`,
-      action: () => this.openWebPresentation(),
-    },
-    {
-      id: 'div2',
       url: '/assets/images/1_2.png',
       action: () =>
         this.openPowerPointPresentation(
@@ -34,23 +34,23 @@ export class ContextComponent {
         ),
     },
     {
-      id: 'div3',
+      id: 'div2',
       url: '/assets/images/1_3.png',
 
       action: () => this.downloadPDF('assets/a-d/work_page'),
     },
     {
-      id: 'div4',
+      id: 'div3',
       url: '/assets/images/1_4.png',
       action: () => this.downloadPDF(`assets/a-d/parent_guide`),
     },
+    // {
+    //   id: 'div3',
+    //   url: '/assets/images/2_1.png',
+    //   action: () => this.openWebPresentation(),
+    // },
     {
-      id: 'div5',
-      url: '/assets/images/2_1.png',
-      action: () => this.openWebPresentation(),
-    },
-    {
-      id: 'div6',
+      id: 'div4',
       url: '/assets/images/2_2.png',
       action: () =>
         this.openPowerPointPresentation(
@@ -58,46 +58,52 @@ export class ContextComponent {
         ),
     },
     {
-      id: 'div7',
+      id: 'div5',
       url: '/assets/images/2_3.png',
       action: () => this.downloadPDF('assets/e-f/work_page'),
     },
     {
-      id: 'div8',
+      id: 'div6',
       url: '/assets/images/2_4.png',
       action: () => this.downloadPDF('assets/e-f/parent_guide'),
     },
     {
-      id: 'div9',
+      id: 'div7',
       url: '/assets/images/3_1.png',
       action: () => this.downloadPDF('assets/launcher_instructions'),
     },
     {
-      id: 'div10',
+      id: 'div8',
       url: '/assets/images/3_2.png',
       action: () => this.downloadImage(`assets/banner.png`),
     },
     {
-      id: 'div11',
+      id: 'div9',
       url: '/assets/images/3_3.png',
       action: () => this.downloadImage(`assets/banner_usage_instructions.jpg`),
     },
     {
-      id: 'div12',
+      id: 'div10',
       url: '/assets/images/3_4.png',
       action: () => this.sendWhatsAppInvitation(),
     },
     {
-      id: 'div13',
+      id: 'div11',
       url: '/assets/images/3_5.png',
+      action: () => console.log('empty for now'),
+    },
+    {
+      id: 'div12',
+      url: '/assets/images/3_6.png',
       action: () => console.log('empty for now'),
     },
   ];
 
-  //slice the array to three arrays array for each column
-  rightColumnContext: ButtonContext[] = this.contextArr.slice(0, 4);
-  middleColumnContext: ButtonContext[] = this.contextArr.slice(4, 8);
-  leftColumnContext: ButtonContext[] = this.contextArr.slice(8, 14);
+  //slice the array to four arrays array for each column
+  rightColumnContext: ButtonContext[] = this.contextArr.slice(0, 3);
+  middleRightColumnContext: ButtonContext[] = this.contextArr.slice(3, 6);
+  middleLeftColumnContext: ButtonContext[] = this.contextArr.slice(6, 9);
+  leftColumnContext: ButtonContext[] = this.contextArr.slice(9, 12);
 
   openWebPresentation() {
     const url = '/assets/presentation/index.html';

@@ -6,7 +6,7 @@ import { TokenStorageService } from '../services/token-storage.service';
 export const authGuard: CanActivateFn = () => {
   const tokenService = inject(TokenStorageService);
   const router = inject(Router);
-  // return of(true);
+  return of(true);
   const token = tokenService.getToken();
 
   if (token) {
