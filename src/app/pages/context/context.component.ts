@@ -39,7 +39,7 @@ export class ContextComponent {
     {
       id: 'div2',
       url: '/assets/images/1_3.png',
-      toolTip: '.דפים להדפסה: איור טנק ומפה',
+      toolTip: 'דפים להדפסה: איור טנק ומפה',
       action: () => this.downloadPDF('assets/a-d/work_page'),
     },
     {
