@@ -97,18 +97,40 @@
 
 
 @media (max-width: 768px) {
-    .header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  
-      .image-header {
-        width: 100%; 
-        margin-bottom: 10px; 
-      }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8%; 
+    .image-header {
+      width: 100%;
+      margin-bottom: 10px;
     }
-  
-    .sub-Header {
-      margin-top: 20px; 
-    }
+  }
+
+  .kids1,.kids2 {
+    display: none;
+  }
+  .big-title {
+    margin-top: 0;
+  }
+
+  .sub-Header {
+    margin-top: 20px;
+    padding: 0 10px; 
+  }
+
+  .sub-Header img {
+    width: 100%; 
+    height: auto; 
+  }
+  .title-text{
+    font-size: 15px;
+    text-align: center;
+    color: white;
+  }
+  .text-bold{
+    font-weight: bold;
+  }
+ 
   }
