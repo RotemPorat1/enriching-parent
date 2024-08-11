@@ -11,8 +11,8 @@
   } @else{
   <div class="title-text custom-font-medium">
     @for (row of textRows; track row) {
-    <div [class.text-bold]="row.isBold">
-      <p>{{ row.text }}</p>
+    <div>
+      <p [class.text-bold]="row.isBold">{{ row.text }}</p>
     </div>
     }
   </div>
