@@ -22,11 +22,6 @@ export class ContextComponent {
 
   apiUrl = environment.apiUrl;
   contextArr: ButtonContext[] = [
-    // {
-    //   id: 'div1',
-    //   url: `/assets/images/1_1.png`,
-    //   action: () => this.openWebPresentation(),
-    // },
     {
       id: 'div1',
       url: '/assets/images/1_2.png',
@@ -47,11 +42,6 @@ export class ContextComponent {
       url: '/assets/images/1_4.png',
       action: () => this.downloadPDF(`assets/a-d/parent_guide`),
     },
-    // {
-    //   id: 'div3',
-    //   url: '/assets/images/2_1.png',
-    //   action: () => this.openWebPresentation(),
-    // },
     {
       id: 'div4',
       url: '/assets/images/2_2.png',
