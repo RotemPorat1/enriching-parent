@@ -31,22 +31,6 @@ export class HeaderComponent {
     url: '/assets/images/MAIN TEXT.png',
     alt: 'MAIN HEADER TEXT',
   };
-
-  isDesktop: boolean = true;
-  //check if the user use desktop or mobile
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.checkScreenSize();
-  }
-
-  ngOnInit() {
-    this.checkScreenSize();
-  }
-
-  checkScreenSize() {
-    this.isDesktop = window.innerWidth > 768;
-  }
-
   textRows: { text: string; isBold: boolean }[] = [
     {
       text: '!הוזמנתם לכיתה של הילדים לספר מה אנחנו עושים ברפאל? נפלא',
@@ -70,4 +54,19 @@ export class HeaderComponent {
       isBold: true,
     },
   ];
+
+  isDesktop: boolean = true;
+  //check if the user use desktop or mobile
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenSize();
+  }
+
+  ngOnInit() {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    this.isDesktop = window.innerWidth > 768;
+  }
 }
