@@ -1,8 +1,11 @@
-<div class="footer" [ngClass]="{ animate: animateFooter }">
-  <div class="footer-content">
-    <p class="custom-font-medium">{{ footerTxt }}</p>
-    <h4>
-      <a class="footer-link custom-font-bold" href="">{{ linkTxt }}</a>
-    </h4>
+<div class="wrapper">
+  <div class="superusers">
+    <p>צריכים עזרה? מוזמנים לפנות לאחת מהסופריוזריות החטיבתיות</p>
+    <p class="list" (click)="openLink('https://drive.google.com/file/d/1EmQetOWIyn5GqES4G3PYCIzMweHQb0E-/view?usp=sharing')">
+      <strong>&gt;לרשימת הסופריוזריות&lt;</strong>
+    </p>
+  </div>
+  <div class="mail">
+    <p>להערות, הארות ואפילו תמונות מהפעילות מוזמנים לכתוב לנו: <strong><a href="mailto:rfl_commun@rafael.co.il">תקשורת רפאל</a></strong></p>
   </div>
 </div>

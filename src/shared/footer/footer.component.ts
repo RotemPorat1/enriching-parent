@@ -14,12 +14,8 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent {
-  footerTxt =
-    ':לשאלות, הערות, הארות הנכם מוזמנים לפנות למשרד משאבי האנוש החטיבתי או לתיבה';
-  linkTxt = '> תקשורת רפאל <';
   animateFooter = false;
 
-  //Apply animation class to footer when it enters the viewport on scroll
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const footerElement = document.querySelector('.footer');
@@ -33,5 +29,9 @@ export class FooterComponent {
         this.animateFooter = true;
       }
     }
+  }
+
+  openLink(url: string) {
+    window.open(url, '_blank');
   }
 }

@@ -1,31 +1,20 @@
-.footer {
+.wrapper {
+  color: #fff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 20px; 
-  color: white;
-  font-size: 30px;
-  font: bold;
-  &.animate{
-    -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+}
 
-  }
+.list {
+  cursor: pointer;
 }
-.footer-content{
-  text-align: center;
-}
-h4.footer-button{
-  text-align: center;
-  width: 100%;
-  
-}
-.footer-link:link,
-.footer-link:visited,
-.footer-link:hover,
-.footer-link:active {
-  text-decoration: none; 
-  color: white; 
+
+a {
+  color: #fff;
+  text-decoration: none;
 }
 
 
