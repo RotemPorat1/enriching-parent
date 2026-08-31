@@ -12,23 +12,23 @@ export class HeaderComponent {
   headerImgArr: HeaderImg[] = [
     {
       class: 'image-header kids1',
-      url: '/assets/images/KIDS.png',
+      url: 'assets/images/KIDS.png',
       alt: 'KIDS 1',
     },
     {
       class: 'image-header big-title',
-      url: '/assets/images/BIG TITLE.png',
+      url: 'assets/images/BIG TITLE.png',
       alt: 'TITLE',
     },
     {
       class: 'image-header kids2',
-      url: '/assets/images/KIDS2.png',
+      url: 'assets/images/KIDS2.png',
       alt: 'KIDS 2',
     },
   ];
   subHeaderImg: HeaderImg = {
     class: 'sub-Header',
-    url: '/assets/images/MAIN TEXT.png',
+    url: 'assets/images/MAIN TEXT.png',
     alt: 'MAIN HEADER TEXT',
   };
   textRows: { text: string; isBold: boolean }[] = [

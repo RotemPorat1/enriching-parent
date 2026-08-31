@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="superusers">
     <p>צריכים עזרה? מוזמנים לפנות לאחת מהסופריוזריות החטיבתיות</p>
-    <p class="list" (click)="openLink('https://drive.google.com/file/d/1EmQetOWIyn5GqES4G3PYCIzMweHQb0E-/view?usp=sharing')">
+    <p class="list" (click)="openSuperuserPopup()">
       <strong>&gt;לרשימת הסופריוזריות&lt;</strong>
     </p>
   </div>
@@ -9,3 +9,12 @@
     <p>להערות, הארות ואפילו תמונות מהפעילות מוזמנים לכתוב לנו: <strong><a href="mailto:rfl_commun@rafael.co.il">תקשורת רפאל</a></strong></p>
   </div>
 </div>
+
+@if (showSuperuserPopup) {
+  <div class="popup-overlay" (click)="closeSuperuserPopup()">
+    <div class="popup-content" (click)="$event.stopPropagation()">
+      <button class="popup-close" (click)="closeSuperuserPopup()">✕</button>
+      <img src="assets/images/5_5.png" alt="רשימת הסופריוזריות" />
+    </div>
+  </div>
+}

@@ -15,6 +15,15 @@ import {
 })
 export class FooterComponent {
   animateFooter = false;
+  showSuperuserPopup = false;
+
+  openSuperuserPopup() {
+    this.showSuperuserPopup = true;
+  }
+
+  closeSuperuserPopup() {
+    this.showSuperuserPopup = false;
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
